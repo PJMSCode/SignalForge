@@ -1,0 +1,60 @@
+[
+    {
+        "alert_name": "Potential Brute Force Login Attempt",
+        "severity": "high",
+        "user": "jdoe",
+        "source_ip": "192.168.1.10",
+        "first_seen": "2026-05-01T09:01:00",
+        "last_seen": "2026-05-01T09:03:00",
+        "event_count": 5,
+        "mitre_attack": {
+            "technique": "T1110",
+            "name": "Brute Force"
+        },
+        "reason": "5 failed login attempts detected for user 'jdoe' within 5 minutes."
+    },
+    {
+        "alert_name": "Suspicious Admin Account Creation",
+        "severity": "critical",
+        "target_user": "temp_admin",
+        "performed_by": "svc_account",
+        "role_assigned": "admin",
+        "source_ip": "10.0.0.5",
+        "timestamp": "2026-05-01T02:15:00",
+        "mitre_attack": {
+            "technique": "T1136",
+            "name": "Create Account"
+        },
+        "reason": "admin account was created outside business hours; account was created by high-risk actor 'svc_account'"
+    },
+    {
+        "alert_name": "Suspicious Process Execution",
+        "severity": "high",
+        "hostname": "workstation-01",
+        "user": "jdoe",
+        "process_name": "powershell.exe",
+        "path": "C:\\Users\\jdoe\\Downloads\\powershell.exe",
+        "parent_process": "explorer.exe",
+        "timestamp": "2026-05-01T10:05:00",
+        "mitre_attack": {
+            "technique": "T1059",
+            "name": "Command and Scripting Interpreter"
+        },
+        "reason": "high-risk process 'powershell.exe' was executed; process executed from suspicious path 'C:\\Users\\jdoe\\Downloads\\powershell.exe'"
+    },
+    {
+        "alert_name": "Suspicious Process Execution",
+        "severity": "high",
+        "hostname": "workstation-01",
+        "user": "jdoe",
+        "process_name": "unknown.exe",
+        "path": "C:\\Users\\jdoe\\AppData\\Local\\Temp\\unknown.exe",
+        "parent_process": "powershell.exe",
+        "timestamp": "2026-05-01T10:06:00",
+        "mitre_attack": {
+            "technique": "T1059",
+            "name": "Command and Scripting Interpreter"
+        },
+        "reason": "process executed from suspicious path 'C:\\Users\\jdoe\\AppData\\Local\\Temp\\unknown.exe'; process was launched by suspicious parent 'powershell.exe'"
+    }
+]
