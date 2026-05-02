@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-05-01T10:00:00",
+    "hostname": "workstation-01",
+    "user": "jdoe",
+    "process_name": "chrome.exe",
+    "path": "C:\\Program Files\\Google\\Chrome\\chrome.exe",
+    "parent_process": "explorer.exe"
+  },
+  {
+    "timestamp": "2026-05-01T10:05:00",
+    "hostname": "workstation-01",
+    "user": "jdoe",
+    "process_name": "powershell.exe",
+    "path": "C:\\Users\\jdoe\\Downloads\\powershell.exe",
+    "parent_process": "explorer.exe"
+  },
+  {
+    "timestamp": "2026-05-01T10:06:00",
+    "hostname": "workstation-01",
+    "user": "jdoe",
+    "process_name": "unknown.exe",
+    "path": "C:\\Users\\jdoe\\AppData\\Local\\Temp\\unknown.exe",
+    "parent_process": "powershell.exe"
+  }
+]

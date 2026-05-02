@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2026-05-01T02:15:00",
+    "action": "create_user",
+    "target_user": "temp_admin",
+    "performed_by": "svc_account",
+    "role_assigned": "admin",
+    "source_ip": "10.0.0.5"
+  },
+  {
+    "timestamp": "2026-05-01T14:30:00",
+    "action": "create_user",
+    "target_user": "new_hire",
+    "performed_by": "hr_system",
+    "role_assigned": "user",
+    "source_ip": "10.0.0.10"
+  }
+]
