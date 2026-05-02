@@ -2,6 +2,7 @@ from engine.loader import load_all_logs
 from engine.rule_engine import RuleEngine
 from detections.brute_force import detect_brute_force
 from detections.suspicious_admin_creation import detect_suspicious_admin_creation
+from detections.suspicious_process_execution import detect_suspicious_process_execution
 
 def main() -> None:
     logs = load_all_logs()
@@ -15,6 +16,7 @@ def main() -> None:
     engine = RuleEngine()
     engine.register_rule("auth", detect_brute_force)
     engine.register_rule("identity", detect_suspicious_admin_creation)
+    engine.register_rule("endpoint", detect_suspicious_process_execution)
 
     alerts = engine.run(logs)
 
